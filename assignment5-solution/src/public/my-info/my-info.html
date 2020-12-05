@@ -1,0 +1,14 @@
+
+<div ng-if="myInfoController.userInfo != undefined">
+    <span ng-model="myInfoController.userInfo"><strong>First Name: </strong>{{ myInfoController.userInfo.first_name }}</span><br>
+    <span ng-model="myInfoController.userInfo"><strong>Last Name: </strong>{{ myInfoController.userInfo.last_name }}</span><br>
+    <span ng-model="myInfoController.userInfo"><strong>Email: </strong>{{ myInfoController.userInfo.email }}</span><br>
+    <span ng-model="myInfoController.userInfo"><strong>Phone Number: </strong>{{ myInfoController.userInfo.phone }}</span><br>
+    <span><strong>Favorite Menu Item: </strong></span><br>
+    <span ng-model="myInfoController.userInfo">{{ myInfoController.userInfo.item_short_name }}</span><br>
+    <span ng-model="myInfoController.userInfo">{{ myInfoController.userInfo.item_name }}</span><br>
+    <span ng-model="myInfoController.userInfo">{{ myInfoController.userInfo.item_description }}</span><br>
+    <img class="img-responsive" width="250" height="150" ng-src="{{ myInfoController.basePath }}/images/{{ myInfoController.userInfo.item_short_name }}.jpg">
+</div>
+
+<span ng-if="myInfoController.userInfo == undefined">Not Signed Up Yet. Sign up Now!</span>
